@@ -2,7 +2,8 @@ import { beginCell, Cell, contractAddress, StateInit, storeStateInit, toNano } f
 import {hex} from '../build/main.compiled.json'
 import qs from "qs"
 import qrcode from "qrcode-terminal";
-
+import dotenv from 'dotenv'
+dotenv.config()
 async function deployScript() {
     const codeCell = Cell.fromBoc(Buffer.from(hex, 'hex'))[0]
     const dataCell = new Cell()
